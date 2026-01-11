@@ -1,0 +1,56 @@
+﻿:host {
+  display: block;
+}
+
+.experience-section {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 10px;
+  overflow: hidden;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15) !important;
+  }
+}
+
+.card-header {
+  border-bottom: none;
+  
+  .badge {
+    transition: transform 0.3s ease;
+  }
+  
+  &:hover .badge {
+    transform: scale(1.05);
+  }
+}
+
+.bg-gradient-primary {
+  background: linear-gradient(135deg, #0d6efd 0%, #0b5ed7 100%) !important;
+  border: none;
+}
+
+.badge {
+  font-weight: 500;
+  padding: 0.5em 0.8em;
+}
+
+/* Animaciones suaves */
+.experience-section * {
+  transition: all 0.3s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .display-4 {
+    font-size: 2.5rem;
+  }
+  
+  .card-body .row > div {
+    margin-bottom: 1rem;
+  }
+}

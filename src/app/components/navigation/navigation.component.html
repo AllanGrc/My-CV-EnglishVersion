@@ -1,0 +1,53 @@
+﻿<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top" style="z-index: 1030;">
+  <div class="container">
+    <!-- Logo/Brand -->
+    <a class="navbar-brand fw-bold text-primary d-flex align-items-center" href="#">
+      <i class="fas fa-user-circle me-2 fa-lg"></i>
+      <span>Allan García</span>
+      <span class="badge bg-success ms-2">ESL Specialist</span>
+    </a>
+    
+    <!-- Mobile Toggle -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <!-- Navigation Items -->
+    <div class="collapse navbar-collapse" id="mainNavbar">
+      <div class="navbar-nav ms-auto d-flex align-items-center nav-container">
+        <div class="d-flex flex-wrap justify-content-center gap-2">
+          <a *ngFor="let item of navItems" 
+             (click)="scrollToSection(item.id)"
+             class="nav-link btn btn-outline-primary btn-sm mx-1 d-flex align-items-center">
+            <i class="fas {{item.icon}} me-1"></i>
+            {{item.label}}
+          </a>
+        </div>
+        
+        <!-- Quick Contact Info -->
+        <div class="ms-3 border-start ps-3 d-none d-lg-block">
+          <small class="text-muted">
+            <i class="fas fa-phone-alt me-1"></i> (+505) 83806424
+            <br>
+            <i class="fas fa-envelope me-1"></i> schoolel.info@gmail.com
+          </small>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Floating quick navigation for mobile -->
+<div class="d-block d-lg-none fixed-bottom bg-white shadow-lg" style="z-index: 1020;">
+  <div class="container py-2">
+    <div class="row g-1">
+      <div *ngFor="let item of navItems" class="col text-center">
+        <button (click)="scrollToSection(item.id)" 
+                class="btn btn-sm btn-outline-primary w-100">
+          <i class="fas {{item.icon}}"></i>
+          <small class="d-block">{{item.label}}</small>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

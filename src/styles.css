@@ -1,0 +1,39 @@
+﻿/* ESTILOS GLOBALES - TEMAS */
+body.light-theme {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
+
+body.dark-theme {
+  background-color: #121212 !important;
+  color: #ffffff !important;
+}
+
+/* Cards */
+.dark-theme .card {
+  background-color: #1e1e1e !important;
+  color: #ffffff !important;
+  border-color: #333 !important;
+}
+
+.light-theme .card {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  border-color: #dee2e6 !important;
+}
+
+/* Header y Footer */
+.dark-theme .app-header {
+  background-color: #121212 !important;
+  border-bottom-color: #333 !important;
+}
+
+.light-theme .app-header {
+  background-color: #ffffff !important;
+  border-bottom-color: #dee2e6 !important;
+}
+
+/* Transiciones */
+body, .card, .app-header {
+  transition: background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease !important;
+}

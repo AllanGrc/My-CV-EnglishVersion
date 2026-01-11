@@ -1,0 +1,192 @@
+﻿/* References Component - Estilos personalizados */
+.references-section {
+  background: linear-gradient(135deg, #f0f7ff 0%, #ffffff 100%);
+  padding: 5rem 0;
+  position: relative;
+}
+
+.references-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, #0d6efd, #198754, #ffc107);
+}
+
+/* Tarjetas de referencia */
+.reference-card {
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.reference-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15) !important;
+}
+
+.reference-card .card-header {
+  border-radius: 20px 20px 0 0 !important;
+  padding: 1.5rem;
+}
+
+/* Avatares de referencia */
+.reference-avatar {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  border-radius: 50%;
+  border: 4px solid white;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* Badges personalizados */
+.badge {
+  padding: 0.5em 1.2em;
+  font-weight: 600;
+  border-radius: 25px;
+  border: 2px solid transparent;
+}
+
+.badge.bg-primary {
+  background-color: rgba(13, 110, 253, 0.1) !important;
+  color: #0d6efd !important;
+  border-color: rgba(13, 110, 253, 0.3);
+}
+
+.badge.bg-success {
+  background-color: rgba(25, 135, 84, 0.1) !important;
+  color: #198754 !important;
+  border-color: rgba(25, 135, 84, 0.3);
+}
+
+.badge.bg-warning {
+  background-color: rgba(255, 193, 7, 0.1) !important;
+  color: #ffc107 !important;
+  border-color: rgba(255, 193, 7, 0.3);
+}
+
+/* Listas personalizadas */
+.list-unstyled li {
+  padding-left: 1.5rem;
+  position: relative;
+  margin-bottom: 0.75rem;
+}
+
+.list-unstyled li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.5rem;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.reference-card.border-primary .list-unstyled li::before {
+  background-color: #0d6efd;
+}
+
+.reference-card.border-success .list-unstyled li::before {
+  background-color: #198754;
+}
+
+.reference-card.border-warning .list-unstyled li::before {
+  background-color: #ffc107;
+}
+
+/* Iconos */
+.fa-user-friends {
+  color: #0d6efd;
+}
+
+.fa-user-tie {
+  color: #0d6efd;
+}
+
+.fa-chalkboard-teacher {
+  color: #198754;
+}
+
+.fa-chart-line {
+  color: #ffc107;
+}
+
+/* Gradiente final */
+.bg-gradient-primary {
+  background: linear-gradient(135deg, #0d6efd 0%, #6610f2 100%) !important;
+}
+
+.display-4 {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Animaciones */
+@keyframes floatAvatar {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.reference-avatar i {
+  animation: floatAvatar 3s ease-in-out infinite;
+}
+
+@keyframes fadeInCards {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.reference-card {
+  animation: fadeInCards 0.8s ease-out;
+}
+
+.reference-card:nth-child(1) { animation-delay: 0.1s; }
+.reference-card:nth-child(2) { animation-delay: 0.3s; }
+.reference-card:nth-child(3) { animation-delay: 0.5s; }
+
+/* Responsive */
+@media (max-width: 992px) {
+  .reference-card {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .references-section {
+    padding: 3rem 0;
+  }
+  
+  .display-5 {
+    font-size: 2rem;
+  }
+  
+  .reference-avatar {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .reference-avatar i {
+    font-size: 2.5rem;
+  }
+  
+  .display-4 {
+    font-size: 2.5rem;
+  }
+}
+
+/* Efectos hover en badges */
+.badge:hover {
+  transform: scale(1.05);
+  transition: transform 0.2s ease;
+}
+
+/* Citas en footer */
+.card-footer small {
+  font-style: italic;
+  line-height: 1.5;
+}

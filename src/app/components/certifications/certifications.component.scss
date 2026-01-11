@@ -1,0 +1,184 @@
+﻿/* Certifications Component - Estilos personalizados */
+.certifications-section {
+  background: linear-gradient(135deg, #fff9f0 0%, #ffffff 100%);
+  padding: 5rem 0;
+  position: relative;
+}
+
+.certifications-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, #ffc107, #0d6efd, #198754);
+}
+
+/* Tarjetas de reconocimiento */
+.recognition-card {
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.recognition-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15) !important;
+}
+
+.recognition-card .card-header {
+  border-radius: 20px 20px 0 0 !important;
+  padding: 1.5rem 2rem;
+}
+
+/* Contenedores de badges */
+.badge-container {
+  border: 2px dashed #dee2e6;
+  transition: all 0.3s ease;
+}
+
+.badge-container:hover {
+  border-color: #0d6efd;
+  background-color: rgba(13, 110, 253, 0.05);
+}
+
+.badge-icon {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  border-radius: 50%;
+  border: 3px solid white;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Badges personalizados */
+.badge {
+  padding: 0.5em 1.2em;
+  font-weight: 600;
+  border-radius: 25px;
+  border: 2px solid transparent;
+}
+
+.badge.bg-primary {
+  background-color: rgba(13, 110, 253, 0.1) !important;
+  color: #0d6efd !important;
+  border-color: rgba(13, 110, 253, 0.3);
+}
+
+.badge.bg-warning {
+  background-color: rgba(255, 193, 7, 0.1) !important;
+  color: #ffc107 !important;
+  border-color: rgba(255, 193, 7, 0.3);
+}
+
+.badge.bg-success {
+  background-color: rgba(25, 135, 84, 0.1) !important;
+  color: #198754 !important;
+  border-color: rgba(25, 135, 84, 0.3);
+}
+
+.badge.bg-info {
+  background-color: rgba(13, 202, 240, 0.1) !important;
+  color: #0dcaf0 !important;
+  border-color: rgba(13, 202, 240, 0.3);
+}
+
+/* Gradientes */
+.bg-gradient-warning {
+  background: linear-gradient(135deg, #ffc107 0%, #ffca2c 100%) !important;
+}
+
+.bg-gradient-primary {
+  background: linear-gradient(135deg, #0d6efd 0%, #0b5ed7 100%) !important;
+}
+
+/* Iconos */
+.fa-award, .fa-trophy, .fa-certificate {
+  color: #ffc107;
+}
+
+.fa-users {
+  color: #0d6efd;
+}
+
+.fa-lightbulb {
+  color: #ffc107;
+}
+
+/* Animaciones */
+@keyframes floatAnimation {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.badge-icon i {
+  animation: floatAnimation 3s ease-in-out infinite;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.recognition-card {
+  animation: fadeIn 0.8s ease-out;
+}
+
+.recognition-card:nth-child(1) { animation-delay: 0.1s; }
+.recognition-card:nth-child(2) { animation-delay: 0.3s; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .certifications-section {
+    padding: 3rem 0;
+  }
+  
+  .display-5 {
+    font-size: 2rem;
+  }
+  
+  .h2 {
+    font-size: 1.75rem;
+  }
+  
+  .badge-icon {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .recognition-card .card-header {
+    padding: 1rem;
+  }
+  
+  .display-4 {
+    font-size: 2.5rem;
+  }
+}
+
+/* Efectos hover en botones */
+.btn-outline-primary:hover, .btn-outline-warning:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Listas personalizadas */
+.list-unstyled li {
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.list-unstyled li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.5rem;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #198754;
+}

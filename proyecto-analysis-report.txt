@@ -1,0 +1,38 @@
+﻿CLEAR
+**********************
+Windows PowerShell transcript start
+Start time: 20260109174018
+Username: DESKTOP-G1B0P8H\MSI
+RunAs User: DESKTOP-G1B0P8H\MSI
+Configuration Name: 
+Machine: DESKTOP-G1B0P8H (Microsoft Windows NT 10.0.26200.0)
+Host Application: C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -noexit -command try { . "c:\Users\MSI\AppData\Local\Programs\Microsoft VS Code Insiders\934a4f6b49\resources\app\out\vs\workbench\contrib\terminal\common\scripts\shellIntegration.ps1" } catch {}
+Process ID: 13472
+PSVersion: 5.1.26100.7462
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.7462
+BuildVersion: 10.0.26100.7462
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is proyecto-analysis-report.txt
+The expression after '.' in a pipeline element produced an object that was not valid. It must result in a command name, 
+a script block, or a CommandInfo object.
+At line:484 char:7
++     . $MyInvocation.MyCommand.Path
++       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : BadExpression
+The expression after '.' in a pipeline element produced an object that was not valid. It must result in a command name, a script block, or a CommandInfo object.
+At line:484 char:7
++     . $MyInvocation.MyCommand.Path
++       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (:) [], RuntimeException
+    + FullyQualifiedErrorId : BadExpression
+
+**********************
+Windows PowerShell transcript end
+End time: 20260109174018
+**********************

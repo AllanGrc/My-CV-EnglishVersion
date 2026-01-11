@@ -1,0 +1,187 @@
+﻿/* Skills Component - Estilos personalizados */
+.skills-section {
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  padding: 5rem 0;
+  position: relative;
+}
+
+.skills-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, #6610f2, #0d6efd, #20c997);
+}
+
+/* Progress bars personalizados */
+.progress {
+  border-radius: 10px;
+  background-color: #e9ecef;
+  overflow: hidden;
+}
+
+.progress-bar {
+  border-radius: 10px;
+  transition: width 1.5s ease-in-out;
+}
+
+/* Tarjetas de habilidades */
+.card {
+  border-radius: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1) !important;
+}
+
+.card-header {
+  border-radius: 15px 15px 0 0 !important;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Iconos circulares */
+.icon-circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+}
+
+/* Badges personalizados */
+.badge {
+  padding: 0.5em 1em;
+  font-weight: 500;
+  border-radius: 20px;
+  border: 1px solid transparent;
+}
+
+.badge.bg-primary {
+  background-color: rgba(13, 110, 253, 0.1) !important;
+  color: #0d6efd !important;
+  border-color: rgba(13, 110, 253, 0.3);
+}
+
+.badge.bg-success {
+  background-color: rgba(25, 135, 84, 0.1) !important;
+  color: #198754 !important;
+  border-color: rgba(25, 135, 84, 0.3);
+}
+
+.badge.bg-warning {
+  background-color: rgba(255, 193, 7, 0.1) !important;
+  color: #ffc107 !important;
+  border-color: rgba(255, 193, 7, 0.3);
+}
+
+.badge.bg-info {
+  background-color: rgba(13, 202, 240, 0.1) !important;
+  color: #0dcaf0 !important;
+  border-color: rgba(13, 202, 240, 0.3);
+}
+
+.badge.bg-dark {
+  background-color: rgba(33, 37, 41, 0.1) !important;
+  color: #212529 !important;
+  border-color: rgba(33, 37, 41, 0.3);
+}
+
+.badge.bg-danger {
+  background-color: rgba(220, 53, 69, 0.1) !important;
+  color: #dc3545 !important;
+  border-color: rgba(220, 53, 69, 0.3);
+}
+
+/* Tarjeta de gradiente final */
+.bg-gradient-primary {
+  background: linear-gradient(135deg, #0d6efd 0%, #6610f2 100%) !important;
+}
+
+.bg-gradient-primary .display-4 {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Colores específicos para iconos */
+.fa-html5 { color: #e34f26; }
+.fa-css3-alt { color: #1572b6; }
+.fa-js { color: #f7df1e; }
+.fa-php { color: #777bb4; }
+.fa-angular { color: #dd0031; }
+.fa-bootstrap { color: #7952b3; }
+.fa-git-alt { color: #f05032; }
+
+/* Animaciones */
+@keyframes progressAnimation {
+  from { width: 0; }
+  to { width: attr(aria-valuenow); }
+}
+
+.progress-bar {
+  animation: progressAnimation 1.5s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.card:nth-child(1) { animation-delay: 0.1s; }
+.card:nth-child(2) { animation-delay: 0.2s; }
+.card:nth-child(3) { animation-delay: 0.3s; }
+.card:nth-child(4) { animation-delay: 0.4s; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .skills-section {
+    padding: 3rem 0;
+  }
+  
+  .display-5 {
+    font-size: 2rem;
+  }
+  
+  .h2 {
+    font-size: 1.75rem;
+  }
+  
+  .display-4 {
+    font-size: 2.5rem;
+  }
+  
+  .icon-circle {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+  
+  .progress {
+    height: 8px;
+  }
+}
+
+/* Efectos hover en tarjetas pequeñas */
+.bg-light.rounded-3 {
+  transition: all 0.3s ease;
+}
+
+.bg-light.rounded-3:hover {
+  background-color: rgba(13, 110, 253, 0.05) !important;
+  border-color: rgba(13, 110, 253, 0.2);
+}
